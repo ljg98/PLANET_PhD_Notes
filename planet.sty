@@ -1,0 +1,194 @@
+\ProvidesPackage{planet}
+%███████████████████████████PAGE FORMATTING PACKAGES█
+\usepackage[headheight=15pt]{geometry}
+%\usepackage{showframe}
+\linespread{1.05}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %for unicode
+\usepackage{graphicx}
+\usepackage{fancyhdr} %must load after geometry for the correct header length
+\usepackage{soul} %ul and bold
+\usepackage{charter} %font
+\usepackage{fancyhdr}
+\usepackage{mhchem} %for isotope typesetting
+
+\usepackage{wrapfig} %inset graphics
+\usepackage{enumitem} %itemize and enumerate features
+\usepackage{ragged2e} %text alignment
+\raggedright %global raggedright
+\usepackage{xcolor}
+\usepackage{colortbl} %coloured cells in tables
+\usepackage{booktabs} %rules for tables
+\usepackage[parfill]{parskip} %blank line for N/P with noindent by default
+\usepackage[none]{hyphenat} %no hyphenated words at end of lines
+\usepackage{microtype} %better text formatting
+\usepackage{lscape} %landscape pages
+\usepackage{bookmark}%Faster updated bookmarks
+\usepackage{subcaption}%For subfigures
+
+\usepackage{hyperref}
+%Imperative to stop hyperref being messed up by setcounter
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,}
+
+\usepackage{import}
+\usepackage{float}%exact placing of floats
+
+\usepackage{etoolbox}%Works with titlesec to allow for TOC label changes
+\usepackage{tabto}%alignment in margin
+\usepackage{marginnote}%margin notes inside floats
+\usepackage{lipsum}
+\usepackage{varwidth}%variable width minipage
+
+\usepackage{amsmath, amssymb, amsfonts, mathtools, bm}
+\usepackage{pifont} %Alternative bullet points
+\definecolor{primer_dark}{HTML}{A71814}
+\definecolor{primer}{HTML}{EC6607}
+\definecolor{primer_light}{HTML}{F6A822}
+\definecolor{iop_grey}{HTML}{8E96BA}
+\newcommand{\ts}{\textsuperscript} %shortens Superscript command
+\newcommand{\angstrom}{\textup{\AA}} %Defines Angstrom
+\newcommand{\ensdf}{\href{https://www.nndc.bnl.gov/ensdf/ }{ENSDF }}
+\newcommand{\xundl}{\href{https://www.nndc.bnl.gov/ensdf/xundl/index.jsp }{XUNDL}}
+
+\newcommand\allbold[1]{\textbf{\boldmath#1}} %Ensures maths mode is bold inside bfseries
+\newcommand\anth{{\color{primer}\ding{107}} }
+%███████████████████████████TITLE FORMATTING PACKAGES█
+\usepackage[raggedright, explicit]{titlesec}
+\usepackage[skins, breakable]{tcolorbox}
+\usepackage{environ}
+
+\titleformat{\chapter}[display]
+    {\normalfont\Huge\bfseries}
+    {}
+    {0em}
+    {\begin{tcolorbox}[
+    enhanced,
+    halign=center,
+    valign=center,
+    box align=center,
+    title={\Large\textbf{\thechapter}},
+    attach boxed title to top center={yshift=-4mm,yshifttext=-1mm},
+    coltitle=black,
+    colframe=primer_dark,
+    colback=white,
+    boxrule=2pt,
+    arc=10pt,
+    boxed title style={size=small,colback=white,colframe=white}
+    ]
+#1
+\end{tcolorbox}
+}
+\titlespacing{\chapter}{0pt}{-7em}{-3em}
+\setcounter{secnumdepth}{2}
+
+\newtcbox{\keyframe}{
+    enhanced,
+    center,
+    fontupper=\Huge\bfseries,
+    box align=center,
+    halign=center,
+    valign=center,
+    colframe=iop_grey,
+    colback=white,
+    boxrule=2pt,
+    arc=10pt
+    }
+%███████████████████████████CAPTION FORMATTING PACKAGES█
+\usepackage[labelfont=bf]{caption}%captions in floats
+
+%███████████████████████████CONTENTS FORMATTING PACKAGES█
+\usepackage{titletoc}
+\newtcbox{\contentsframe}{
+    enhanced,
+    center,
+    fontupper=\Huge\bfseries,
+    box align=center,
+    halign=center,
+    valign=center,
+    colframe=iop_grey,
+    colback=white,
+    boxrule=2pt,
+    arc=10pt
+    }
+    
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\titlecontents{part}[0em]
+{\Large\bfseries\protect\addvspace{5pt}}
+{\thecontentslabel:XYZ\enskip}{}
+{\hfill}
+
+\titlecontents{chapter}[0em]
+{\large\bfseries\protect\addvspace{5pt}}%
+{\thecontentslabel:\enskip}{}% 
+{\hspace{0.4em}}%
+
+\renewcommand{\tableofcontents}{%
+    \section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    }
+
+\renewcommand{\contentsname}{\hfill \contentsframe{Table of Contents}\hfill}
+
+
+%███████████████████████████FIGURE FORMATTING PACKAGES█
+\usepackage{tikz}
+\usepackage{physics} %physics macros, needed for some tikz diagrams
+
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+%███████████████████████████████EXAMPLE BOXES█
+\newtcolorbox{example}[3][parbox=false]{
+skin=bicolor,
+colbacktitle=primer_dark,
+colback=white,
+overlay unbroken and first={\node[anchor=north east,outer sep=-1pt] at (frame.north east) {\begin{tikzpicture}
+\draw[primer_light, line width = 1, fill=primer_light] (7,0) circle(6pt);
+\draw[primer_light, line width = 1, fill=\ifnum#2>1 primer_light\else none\fi] (7.5,0) circle(6pt);
+\draw[primer_light, line width = 1, fill=\ifnum#2>2 primer_light\else none\fi] (8,0) circle(6pt);
+\end{tikzpicture}};},
+enhanced,
+coltitle=white, 
+colframe = primer_dark,
+%frame style={draw=none,fill=none},
+title={#3}\phantom{p},
+fonttitle=\bfseries,
+#1}
+
+\newtcolorbox{historical}[2][parbox=false]{
+skin=bicolor,
+colbacktitle=primer_light,
+colback=white,
+coltitle=white, 
+colframe = primer_light,
+%frame style={draw=none,fill=none},
+title={#2}\phantom{p},
+fonttitle=\bfseries,
+#1}
+
+\newtcolorbox{derivation}[3][parbox=false]{
+skin=bicolor,
+colbacktitle=primer,
+colback=white,
+overlay unbroken and first={\node[anchor=north east,outer sep=-1pt] at (frame.north east) {\begin{tikzpicture}
+\draw[primer_dark, line width = 1, fill=primer_dark] (7,0) circle(6pt);
+\draw[primer_dark, line width = 1, fill=\ifnum#2>1 primer_dark\else none\fi] (7.5,0) circle(6pt);
+\draw[primer_dark, line width = 1, fill=\ifnum#2>2 primer_dark\else none\fi] (8,0) circle(6pt);
+\end{tikzpicture}};},
+coltitle=white, 
+colframe = primer,
+%frame style={draw=none,fill=none},
+title={#3}\phantom{p},
+fonttitle=\bfseries,
+#1}
+
+%███████████████████████████████MHCHEM SETTINGS█
+

@@ -1,0 +1,22 @@
+\contentsline {part}{I\hspace {1em}Taught Programme: Baseline Training}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Nuclear Data}{4}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Introduction}{4}{section.3}%
+\contentsline {section}{\numberline {1.2}Nuclear Data Sets}{4}{section.4}%
+\contentsline {section}{\numberline {1.3}Gross Properties of Nuclei}{5}{section.5}%
+\contentsline {subsection}{\numberline {1.3.1}Measuring Radii}{5}{subsection.6}%
+\contentsline {subsection}{\numberline {1.3.2}Measuring Masses}{7}{subsection.8}%
+\contentsline {section}{\numberline {1.4}Differences in Radii and Masses}{9}{section.17}%
+\contentsline {subsection}{\numberline {1.4.1}Neutron Separation Energies}{9}{subsection.18}%
+\contentsline {subsection}{\numberline {1.4.2}Nuclear Shell Model}{12}{subsection.22}%
+\contentsline {section}{\numberline {1.5}Prep Work for Surrey}{12}{section.23}%
+\contentsline {section}{\numberline {1.6}Nuclear Excitation Patterns}{16}{section.24}%
+\contentsline {section}{\numberline {1.7}Nuclear Deformation and Rotations}{19}{section.25}%
+\contentsline {section}{\numberline {1.8}Towards a Global View of Nuclear Structure}{20}{section.26}%
+\contentsline {section}{\numberline {1.9}Simple Models of Nuclear Structure}{21}{section.27}%
+\contentsline {section}{\numberline {1.10}Nuclear Spectroscopic Measurements}{21}{section.28}%
+\contentsline {part}{II\hspace {1em}Taught Programme: Instrumentation}{24}{part.29}%
+\contentsline {part}{III\hspace {1em}Taught Programme: Simulation and Modelling}{25}{part.30}%
+\contentsline {part}{IV\hspace {1em}Taught Programme: Nuclear Data Pipeline}{26}{part.31}%
+\contentsline {part}{V\hspace {1em}Taught Programme: Consolidation}{27}{part.32}%
+\contentsline {part}{VI\hspace {1em}Project}{28}{part.33}%
+\contentsfinish 
