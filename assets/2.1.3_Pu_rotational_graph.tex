@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.85\textwidth,
+    height=0.6\textwidth,
+    xlabel={$I(I+1)$},
+    ylabel={Energy Scaled to E(\(2_1^+\)) / keV},
+    xmin=0, xmax=750,
+    ymin=0, ymax=100,
+    grid=major,
+    grid style={dotted,gray!50},
+    legend pos=north west,
+    legend cell align={left},
+    mark size=2pt,
+]
+
+% Rigid rotor guide: E_scaled = I(I+1)/6
+\addplot[black, dashed, no markers, domain=0:750] {x/6};
+\addlegendentry{$I(I+1)/6$ (rigid rotor)}
+
+% 242Pu
+\addplot[blue, mark=*, thick] coordinates {
+    (6,1.00) (20,3.27) (42,6.80) (72,11.51) (110,17.29)
+    (156,24.09) (210,31.80) (272,40.36) (342,49.69)
+    (420,59.69) (506,70.29) (600,81.38) (702,92.71)
+};
+\addlegendentry{\ce{^{242}Pu}}
+
+% 244Pu
+\addplot[red, mark=square*, thick] coordinates {
+    (6,1.00) (20,3.39) (42,6.91) (72,11.63) (110,17.41)
+    (156,24.22) (210,31.89) (272,40.39) (342,49.61)
+    (420,59.43) (506,69.70) (600,79.96) (702,89.89)
+};
+\addlegendentry{\ce{^{244}Pu}}
+
+\end{axis}
+\end{tikzpicture}
