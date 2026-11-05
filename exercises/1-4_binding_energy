@@ -1,0 +1,39 @@
+\begin{example}[breakable]{1}{1-4: Binding Energy Calculations}
+\textbf{The following table shows masses and binding energies in MeV for selected nuclei. Note that these are atomic masses. Data taken from AME2016.}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+{Isotope} & {$M(A,Z,N)$} & {$B(A,Z,N)$} \\
+\midrule
+n                   & 939.57    & 0       \\
+$^{1}$H             & 938.78    & 0       \\
+$^{2}$H             & 1876.12   & 2.22    \\
+$^{4}$He            & 3728.40   & 28.30   \\
+$^{5}$He            & 4668.70   & 27.56   \\
+$^{6}$He            & 5606.56   & 29.27   \\
+$^{8}$Be            & 7456.89   & 56.50   \\
+$^{12}$C            & 11177.93  & 92.16   \\
+$^{62}$Ni           & 57685.89  & 545.26  \\
+$^{96}$Zr           & 89337.99  & 829.00  \\
+$^{96}$Nb           & 89337.83  & 828.38  \\
+$^{96}$Mo           & 89334.64  & 830.78  \\
+$^{100}$Zr          & 93073.03  & 852.22  \\
+$^{138}$Te          & 128480.49 & 1138.86 \\
+$^{238}$U           & 221742.91 & 1801.69 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{a.) How much gain in binding energy would be needed for \ce{^5{He}} to be bound in its ground state wrt disintegration into \ce{^4{He} + n}?}
+
+The difference in binding energy between the products and reactants is positive so \ce{^4{He}} is more bound than \ce{^5{He} and energy is released}
+\[B(\ce{^4{He}}) - B(\ce{^5{He}}) = 28.30-27.56=0.74\,\text{MeV}\]
+
+
+\textbf{b.) How much gain in binding energy would be needed for \ce{^8{Be}} to be bound in its ground state wrt disintegration into \ce{^4{He} + ^4{He}}?}
+\[2B(\ce{^4{He}}) - B(\ce{^8{Be}}) = 2(28.30)-56.50=0.1\,\text{MeV}\]
+
+
+\textbf{c.) How much energy is needed to separate a neutron from \ce{^6He}?}
+\[S_n = B(\ce{^6He})-B(\ce{^5He})=29.27-27.56=1.71\,\text{MeV}\]
+\end{example}

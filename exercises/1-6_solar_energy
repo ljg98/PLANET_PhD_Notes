@@ -1,0 +1,29 @@
+\begin{example}[breakable]{1}{1-6: Solar Energy Production}
+\allbold{In the Sun, hydrogen fuses into \ce{^4He}. The age of the Sun is \(4.6 \times 10^9\) years and it has a mass of \(1.99 \times 10^{30}\) kg. The energy output of the Sun is \(4 \times 10^{20}\) MW.}
+
+\allbold{a.) Using an electron mass of \(0.51\)MeV, how much energy is produced per atom of helium produced?}
+
+The proton-proton chain has the net effect of converting four protons into one helium-4 nucleus whilst releasing two positrons.
+\[4\ce{^1H} \to \ce{^4He}+2\ce{e^+}+2\nu_e + 2\gamma \]
+The energy released is a combination of the change in binding energy and the positrons annihilating with surrounding electrons (each pair releasing twice the rest mass of the electron). First, convert the atomic mass of helium-4 to a nuclear mass: \(\ce{m_{He}} = 3728.40 - 4(0.51) = 3726.36\,\text{MeV}\).
+\[4\ce{m_p} -\ce{m_{He}}-2(2\ce{m_e}) = 4(938.78)-3726.36-4(0.51) = 26.72\,\text{MeV}\]
+
+\allbold{b.) How many kilograms of hydrogen are being fused into helium per second?}
+Convert the energy output of the Sun to MeV.
+\[\frac{4\times 10^{26}}{1.6\times 10^{-13}}=2.5\times 10^{39}\,\text{MeVs}^{-1}\]
+So the number of proton-proton chain reactions occuring per second is:
+\[\frac{2.5\times 10^{39}}{26.72}=9.35\times 10^{37}\]
+So the number of hydrogen atoms fusing per second will be four times this (four \ce{^1H} per pp chain), \(3.7\times 10^{38}\). Converting this to moles:
+\[\frac{3.7\times 10^{38}}{N_A} = 6.22\times 10^{14}\,\text{mol}\]
+Since the molar mass of hydrogen is \(1\,\text{gmol}^{-1}\), moles are equivalent to grams. So the total mass of hydrogen is \(6.22 \times 10^{11}\)kg per second.
+
+\textbf{c.) What percentage of its mass has been fused into helium so far?}
+
+Multiply the Sun's age in seconds, \(4.6 \times 10^9 \times 365 \times 24 \times 3600 = 1.45 \times 10^{17}\), by the mass of hydrogen already fused, then express this as a fraction of its total mass.
+\[\frac{(1.45 \times 10^{17})(6.22 \times 10^{11})}{1.99 \times 10^{30}}\times 100 =4.5\%\]
+
+\allbold{d.) If the energy source of the Sun were chemical, how long would the Sun shine for the given energy output? Assume an energy yield of \(10\) eV per hydrogen atom.}
+
+\(1.99 \times 10^{30}\) kg of hydrogen corresponds to \(1.99 \times 10^{33}\) mol or \(1.2\times 10^{57}\) atoms of hydrogen. Each of these atoms contributes \(10\) eV, so a total energy of \(1.92\times10^{39}\) J. So for an energy output of \(4 \times 10^{20}\) MW, the Sun will last for:
+\[t=\frac{1.92\times10^{39}}{4\times 10^{26}} = 4.8\times 10^{12}\,\text{s} = 1.5\times 10^5\,\text{years}\]
+\end{example}

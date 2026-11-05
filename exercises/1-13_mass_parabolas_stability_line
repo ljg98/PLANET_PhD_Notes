@@ -1,0 +1,32 @@
+\begin{example}[breakable]{3}{1-13: Finding the Line of Stability in Mass Parabolas}
+\allbold{The Bethe-Weizs\"{a}cker formula for the binding energy of nuclei is expressed as
+\[B(A,Z,N)=a_1A +a_2A^{2/3} + a_3\frac{Z^2}{A^{1/3}} + a_4\frac{(N-Z)^2}{A}\]
+where the approximate values of the coefficients in MeV are \(a_1=15.68\), \(a_2=-18.56\), \(a_3=-0.717\) and \(a_4=-28.1\). The four terms are called the volume, surface, Coulomb and symmetry terms respectively. Note that there is no pairing term. What would be the value of \(Z\) for the most stable isotope with:}
+
+\allbold{a.) \(A=133\)? Compare with figure \ref{beta1}}
+
+\allbold{b.) \(A=134\)? Compare with figure \ref{beta2}}
+
+\allbold{c.) \(A=294\)?}
+
+\allbold{d.) \(A=400\)?}
+
+\allbold{Hint: Maximise \(B\) versus \(Z\) at constant \(A\) and substitute \(N=A-Z\) before starting}
+
+Begin by casting \(B\) in terms of two variables. Substitute \(N=A-Z\).
+\[B(A,Z) = a_1A +a_2A^{2/3} + a_3\frac{Z^2}{A^{1/3}} + a_4\frac{(A-2Z)^2}{A}\]
+Then differentiate wrt \(Z\) at constant \(A\), set to zero to minimise.
+\[\frac{\partial B}{\partial Z} = 2a_3\frac{Z}{A^{1/3}} - 4a_4\frac{(A-2Z)}{A} = 0\]
+Rearrange to get \(Z_{min}\) in terms of \(A\).
+\[Z_{min}(A) = \frac{2a_4 A}{a_3A^{2/3}+4a_4}=\frac{A}{\frac{a_3}{2a_4}A^{2/3}+2}\]
+Which gives 
+
+a.) \(Z_{min}(133) = 57.0\) MeV. \(2\) MeV above the minimum in figure \ref{beta1}.
+
+b.) \(Z_{min}(134) = 57.4\) MeV. \(2\) MeV above the minimum in figure \ref{beta2}.
+
+c.) \(Z_{min}(294) = 114.7\) MeV
+
+d.) \(Z_{min}(400) = 148.6\) MeV
+    
+\end{example}

@@ -25,6 +25,7 @@
 \usepackage{lscape} %landscape pages
 \usepackage{bookmark}%Faster updated bookmarks
 \usepackage{subcaption}%For subfigures
+\usepackage{pdfpages}%Fpr 
 
 \usepackage{hyperref}
 %Imperative to stop hyperref being messed up by setcounter
@@ -136,7 +137,7 @@
 
 \renewcommand{\contentsname}{\hfill \contentsframe{Table of Contents}\hfill}
 
-
+\newcommand{\code}[1]{\texttt{#1}} %code-face text
 %███████████████████████████FIGURE FORMATTING PACKAGES█
 \usepackage{tikz}
 \usepackage{physics} %physics macros, needed for some tikz diagrams

@@ -1,0 +1,12 @@
+\begin{example}{2}{1-7: Fission of Uranium}
+\allbold{Uranium can undergo fission, for example \ce{^{238}U \to ^{138}Te + ^{100}Zr}. How much energy is released per kilogram?}
+\begin{equation*}
+    \begin{split}
+    \Delta B &= B(\ce{^{138}Te})+B(\ce{^{100}Zr})-B(\ce{^{238}U})\\
+             &= 1138.86 + 852.22 - 1801.69\\
+             &= 189.39 \,\text{MeV per fission}
+\end{split}
+\end{equation*}
+In 1kg of \ce{^{238}U} there are of the order \(\frac{1000\text{g}}{238\text{gmol}^{-1}}\times N_A \approx 2.53 \times 10^{24}\text{ nuclei}\) of \ce{^{238}U}. So the energy released per kg is 
+\[189.39 \times 2.53 \times 10^{24} = 4.79 \times 10^{26}\,\text{MeV kg}^{-1}\]
+\end{example}

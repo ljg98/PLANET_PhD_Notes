@@ -1,0 +1,6 @@
+\begin{example}{1}{1-11: Electronic and Nuclear Binding Energy for Deuterium}
+\textbf{For an atom of \ce{^2H}, what is the ratio of electronic binding energy to nuclear binding energy?}
+
+The atomic ground state of \ce{^2H} is approximately \(13.6\) eV. Comparing this to the nuclear binding energy, \(2.22\) MeV:
+\[\frac{13.6}{2.22 \times 10^6} \approx 6 \times 10^{-6} = 0.0006\%\]
+\end{example}
